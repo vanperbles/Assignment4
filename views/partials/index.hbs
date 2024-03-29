@@ -1,0 +1,42 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p> <a href="/api/product"><button type="button" style="float: right;" class="btn btn-secondary">Add Product</button></a>
+
+
+
+<h1>All Product Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ASIN</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Reviews</th>
+                <th>Stars</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+            
+                
+                    <tr>
+                        
+                        <td><a href="">{{asin}}</a></td>
+                        <td>{{title}}</td>
+                        <td>${{price}}</td>
+                        <td>{{categoryName}}</td>
+                        <td>{{reviews}}</td>
+                        <td>{{stars}}</td>
+                        <td><a href="/api/product/:{{asin}}"><button type="button" class="btn btn-primary">Edit</button></a></td>
+
+                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                        
+
+                    </tr>
+                
+                
+            {{/each}}
+        </tbody>
+    </table>
